@@ -1,0 +1,63 @@
+<div class="container-fluid">
+    <div class="row ">
+        
+        <div class="col-md-5">
+            
+            <h2> Total Cases</h2>
+                <h1><span style="color:grey"><b>{{cases}}</b></span></h1>
+            <br>
+            <h2>Total Deaths</h2>
+            <h1><span style="color:red"><b>{{deaths}}</b></span></h1>
+            <br>
+            <h2> Total Recovered</h2>
+            <h1><span style="color:lightgreen"><b>{{recovered}}</b></span></h1>
+            <br>
+        </div>
+        <div class="col-md-5">
+            
+            <br>
+            <div class="container-fluid">
+                <div style="display: block">
+                    <canvas baseChart
+                    [data]="pieChartData"
+                    [labels]="pieChartLabels"
+                    [chartType]="pieChartType"></canvas>
+                </div>
+              </div>
+        </div>
+        <div class="col-md-2">
+            <h6>{{date}}</h6>
+        </div>
+    </div>
+</div>
+<hr>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card card-body blue">
+               <h1> {{newCases}}</h1>
+               <blockquote class="blockquote">New Cases</blockquote>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card card-body yellow">
+              <h1> {{newDeath}}</h1>
+              <blockquote class="blockquote">New Deaths</blockquote>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card card-body pink">
+               <h1> {{newRecovered}}</h1>
+               <blockquote class="blockquote">Newly Recovered</blockquote>
+            </div>
+        </div>
+    </div>
+    
+</div>
+<br>
+<hr>
+
+
+
+
